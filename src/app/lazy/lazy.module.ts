@@ -1,11 +1,15 @@
-import {NgModule, Component} from '@angular/core'
-import {RouterModule} from '@angular/router'
+import {NgModule, Component} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'lazy-view',
-  template: `<h3>i'm lazy</h3>`
+  template: `<h3>i'm {{ charlesVariable }}</h3>`
 })
-export class LazyComponent {}
+export class LazyComponent {
+
+  charlesVariable = "Chaves";
+
+}
 
 @NgModule({
   declarations: [LazyComponent],
